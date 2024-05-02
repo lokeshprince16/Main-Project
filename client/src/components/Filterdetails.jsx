@@ -1,65 +1,72 @@
-import { useContext } from 'react'
+import { useContext,useState } from 'react'
 import { Agecontext } from '../App'
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Dialog, DialogTitle, DialogContent, DialogActions } from '@mui/material';
 import { examdata } from '../../data/db'
-import { ExternalLink } from 'react-external-link'
+import React from 'react';
 const Filterdetails = () => {
+
     const{data} = useContext(Agecontext)
     console.log(data)
-    const filtered = examdata.filter(i => i.minage === parseInt(data.age) );
+    const filtered = examdata.filter(i => i.minage <= parseInt(data.age) );
+
+  
+    const [expandedRow, setExpandedRow] = useState(null);
+
+    const handleRowClick = (rowId) => {
+      if (expandedRow === rowId) {
+        setExpandedRow(null);
+      } else {
+        setExpandedRow(rowId);
+      }
+      
+    };
+
+    const renderRowDetails = (b) => {
+      return (
+        <TableRow>
+          <TableCell colSpan={Object.keys(b).length + 1}>
+            {Object.keys(b).map((key) => (
+              <div key={key} className='mb-1'>
+                <span className="font-semibold">{key}:</span> {b[key]}
+              </div>
+            ))}
+          </TableCell>
+        </TableRow>
+      );
+    };
+
     
    
   return ( 
   <div className="filter">
-  
-    <h2>Display Data</h2>
-    <h1 className='text-[purple] '>Welcome {data.name},</h1>
-     {/* <p>{data.name}</p>
-     <p>{data.age}</p> */}
-     {/* <p>{data.sex}</p> */}
-     {/* <p>{data.education}</p> */}
-{/*      
-      {filtered.map((d)=>(
-      <ul key={d.id}>
-        <li className='mb-3'>{d.ename}</li>      
-        <li className='mb-3'>{d.minage}</li>
-        <li className='mb-3'>{d.minedu}</li>
-        <li className='mb-3'>{d.ExamFee}</li>
-        <li className='mb-3'>{d.physique}</li>
-        <li className='mb-3'>{d.posts}</li>
-        <li className='mb-3'>{d.ename}</li>
-        <li className='mb-3'>{d.seletionprocess}</li>
-        <li className='mb-3'>{d.approxsalary}</li>
-        <li className='mb-3'>{d.link}</li>
-      </ul>
-))} */}
-
-
-       <table className=' border-solid border-[1px] mr-3 content-center border-green-300'  >
-          <thead >
-            <th>Exam Name</th>
-            <th>Minimum Age</th>
-            <th>Educational qualification</th>
-            <th>link</th>
-          </thead>
-          {filtered.map((d)=>(
-          <tbody>
-            <tr>
-              <td className=' text-2xl text-ellipsis'>{d.ename}</td>
-              <td>{d.minage}</td>
-              <td>{d.minedu}</td>
-             
-              <ExternalLink href={d.link}>
-              <td className='text-red-500 hover:text-blue-500' >{d.link}</td>
-              </ExternalLink>
-            </tr>
-          </tbody>
+    <TableContainer component={Paper}>
+      <Table  className="min-w-full divide-y divide-gray-200">
+        <TableHead>
+          <TableRow>
+            <TableCell className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</TableCell>
+            <TableCell className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</TableCell>
+            <TableCell className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Age</TableCell>
+            <TableCell className="px-6 py-3 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody >
+          {filtered.map(b => (
+            <React.Fragment key={b.id}>
+                <TableRow className="cursor-pointer hover:bg-gray-100" onClick={() => handleRowClick(b.id)}>
+              <TableCell className="px-6 py-4 whitespace-nowrap">{b.id}</TableCell>
+              <TableCell className="px-6 py-4 whitespace-nowrap">{b.ename}</TableCell>
+              <TableCell className="px-6 py-4 whitespace-nowrap">{b.minage}</TableCell>
+              <TableCell className="px-6 py-4 whitespace-nowrap">
+                <Button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" >Details</Button>
+              </TableCell>
+            </TableRow>
+            {expandedRow === b.id && renderRowDetails(b)}
+         </React.Fragment>
           ))}
-        </table>
-    
-
-
-
-    
+        </TableBody>
+      </Table>
+      
+    </TableContainer>
   </div>
    );
 }

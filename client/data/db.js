@@ -188,5 +188,97 @@ export const examdata=[
         link:"https://upsc.gov.in/"
 
     },
+    {
+        id:14,
+        ename:"Central Armed Police Force (CAPF) by UPSC",
+        minedu:['CONSTABLE -10TH STANDARD','HEAD CONSTABLE(RADIO OPERATOR) - 12TH STANDARD OR HSC OR EQUIALENT I.T.I','SUB INSPECTOR AND ASSISTANT COMMANDANT - UG DEGREE FROM RECOGNIZED UNIVERSITY',],
+        minage:18,
+        posts:["Constable, Head Constable,Head Constable(Fitter) , Sub - Inspector , Assistant Commandant"],
+        physique:"*Must verify the Notification",
+        selectionprocess:["1.Main exam ",'2. Physical Test','3.Medical Test','4.Direct Interview'],
+        ExamFee: 'Rs.100 and Allowance will be given to the SC/ST candidates',
+        approxsalary:"20,200+ Incentive",
+        link:"https://www.upsc.gov.in/"
+
+    },
+    {
+        id:15,
+        ename:"IBPS Exam (IBPS PO/MT AND CRP Clerks) ",
+        minedu:'UG degree from any recognized Univeristy',
+        minage:20,
+        posts:['Probabationary Officer',' Management Trainees','Clerks'],
+        physique:"Not Applicable",
+        selectionprocess:["1.Preliminary exam ",'2. Main Exam ','3.Direct Interview'],
+        ExamFee:'Refer the notification',
+        approxsalary:"36,200+ Incentive",
+        link:"https://www.ibps.in/"
+
+    },
+    {
+        id:16,
+        ename:"SBI Exam (SBI PO & Clerk) ",
+        minedu:['UG degree from any recognized Univeristy','Final year UG degree ','Integrated Dual Degree (IDD)','Chartered Accountant(CA)'],
+        minage:21,
+        posts:['Probabationary Officer',' Management Trainees','Clerks'],
+        physique:"Not Applicable",
+        selectionprocess:["1.Preliminary exam ",'2. Main Exam ','3.Direct Interview'],
+        ExamFee:'Refer the notification',
+        approxsalary:"70,000+ Incentive",
+        link:"https://www.ibps.in/"
+
+    },
+    {
+        id:17,
+        ename:"SBI Exam (SBI SO) ",
+        minedu:['UG degree from any recognized Univeristy','Final year UG degree ','Integrated Dual Degree (IDD)','Chartered Accountant(CA)'],
+        minage:30,
+        posts:['Special Management Executive', ' Deputy General Manager - law,contractual','Deputy General Manager - Law','Deputy Manager - Law'],
+        physique:"Not Applicable",
+        selectionprocess:['1 Main Exam ','2.Direct Interview'],
+        ExamFee:'Refer the notification',
+        approxsalary:"1,06,000+ Incentive",
+        link:"https://sbi.co.in/"
+
+    },
+    {
+        id:18,
+        ename:"NABARD (National Bank for Agriculture and Rural Development) - GRADE A ",
+        minedu:['UG degree from any recognized Univeristy'],
+        minage:21,
+        posts:['Officer Grade - A(Assistant Manager)','Manager-General'],
+        physique:"Not Applicable",
+        selectionprocess:['1 Main Exam ','2.Direct Interview','3.Direct Interview'],
+        ExamFee:'Refer the notification',
+        approxsalary:"55,600+ Incentive",
+        link:"https://www.nabard.org/"
+
+    },
+    {
+        id:19,
+        ename:"NABARD (National Bank for Agriculture and Rural Development) - GRADE B ",
+        minedu:['UG degree on Agriculture any recognized Univeristy'],
+        minage:21,
+        posts:['Manager- Agriculture'],
+        physique:"Not Applicable",
+        selectionprocess:['1 Main Exam ','2.Direct Interview','3.Direct Interview'],
+        ExamFee:'Refer the notification',
+        approxsalary:"62,400+ Incentive",
+        link:"https://www.nabard.org/"
+
+    },
+    {
+        id:20,
+        ename:"Railway Recruitment Board (RRB) - NTPC ",
+        minedu:['UG degree on Agriculture any recognized Univeristy and should have Typing skill for the posts,JUnior Accounts Assistant Cum Typist,Traffic Assistant and Senior time keeper'],
+        minage:18,
+        posts:['Commercial Apprentice',' Traffic Apprentice','Enquiry cum Reservation Clerk',' Good guard',' Assistant Station Master, Junior Assistant cum typist','Traffic Assistant','Senior Time Keeper'],
+        physique:"Not Applicable",
+        selectionprocess:['1 . Computer Based Test','2. Document Verification','3. Typewriting Test and Document verification','4.Skill Test and Document Verification'],
+        ExamFee:'Refer the notification',
+        approxsalary:"30,200+ Incentive",
+        link:"https://indianrailways.gov.in/"
+
+    },
+
 
 ]

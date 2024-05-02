@@ -21,9 +21,7 @@ const[data,setdata] = useState({
 
   return (
      <div className="app">
-      <Agecontext.Provider value={{data,setdata}}>
-       
-        
+      <Agecontext.Provider value={{data,setdata}}>       
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Register/>} />

@@ -125,8 +125,8 @@ const Table = () => {
       filterType: 'checkbox',
       selectableRows:false,
       elevation:0,
-      rowsPerPage:10,
-      rowsPerPageOptions:[10,20,30]
+      rowsPerPage:5,
+      rowsPerPageOptions:[5,10,20,30]
     };
   return (
     <div className=' min-h-screen grid place-items-center'>

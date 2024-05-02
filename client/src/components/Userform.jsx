@@ -33,7 +33,7 @@ const Userform = () => {
       setSex('');
       setAge('');
       setEducation('');
-      navigate('/table')
+      navigate('/filter')
 
       
       
