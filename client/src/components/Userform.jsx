@@ -1,11 +1,10 @@
 import React,{ useState,useContext } from 'react'
-import photo1 from '../Images/SSC.jpeg'
-import photo2 from '../Images/TNPSC.jpg'
-import photo3 from '../Images/UPSC.jpeg'
-import bgimage from '../Images/bg.webp'
-import bgimage2 from '../Images/Designer.png'
-import bgimage4 from '../Images/Designer4.png'
-import bgimage3 from '../Images/Designer 3.png'
+import photo1 from '../Images/ssc logo img.png'
+import photo2 from '../Images/TNPSC.png'
+import photo3 from '../Images/SSC.png'
+import photo4 from '../Images/rrb.png'
+import photo5 from '../Images/ibps.jpeg'
+import bgimage from '../Images/6057485.jpg'
 import{ExternalLink} from 'react-external-link'
 import { Agecontext } from '../App'
 import { useNavigate } from 'react-router-dom'
@@ -43,7 +42,7 @@ const Userform = () => {
   
    
 
-   const style = {backgroundImage:`url("${bgimage4}")`,
+   const style = {backgroundImage:`url("${bgimage}")`,
             // height: "100vh",
             // marginTop: "-70px",
             // fontSize: "50px",
@@ -54,7 +53,10 @@ const Userform = () => {
     const images = [
         {id:1,img:photo1,title:"SSC",link:'https://ssc.nic.in/'},
         {id:2,img:photo2,title:"TNPSC",link:'https://www.tnpsc.gov.in/'},
-        {id:3,img:photo3,title:"UPSC",link:'https://upsc.gov.in/'}
+        {id:3,img:photo3,title:"UPSC",link:'https://upsc.gov.in/'},
+        {id:4,img:photo4,title:"RRB",link:'https://indianrailways.gov.in/'},
+        {id:5,img:photo5,title:"IBPS",link:'https://www.ibps.in/'}
+      
     ]
 
   return (
@@ -64,22 +66,23 @@ const Userform = () => {
     <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css" />
 
     {/* <!-- ====== Contact Section Start --> */}
-    <section className=" py-20 lg:py-[120px]  ">
+    <section className=" lg:py-[120px]  ">
        <div className="container">
-          <div className="flex flex-wrap lg:justify-between -mx-4">
+          <div className="flex flex-wrap lg:justify-between ">
              <div className="w-full lg:w-1/2 xl:w-6/12 px-4">
                 <div className="max-w-[570px] mb-12 lg:mb-0">,
                     <span className="container content-start justify-items-start">
-                        <div className="recipe-list">
+                        <div className="grid grid-cols-2 grid-rows-2 gap-10">
                                 {images.map((images) => (
                                     <div key={images.id}> 
-                                        <div className='rounded  bg-white min-w-72 mb-5  max-w-sm  md:ml-36 md:max-w-md lg:ml-72 lg:max-w-3xl overflow-hidden shadow-lg'>
-                                          <img className='w-full h-[260px] transition-all  z-20  ease-in-out' src={images.img} />
-                                        <div className='px-6 py-4'>
+                                        <div className='rounded -mt-5 overflow-hidden  shadow-xl tranform hover:scale-110 duration-500 ease-in-out'>
                                         <ExternalLink href={images.link} >
-                                        <h2 className='text-violet-500  text-center font-bold'>{images.title}</h2>
+                                          <img className='h-56 mb-7 w-52 shadow-emerald-400 rounded-lg bg-white border-white object-cover  ' src={images.img} />
+                                          
+                                        
+                                        <span className='text-emerald-500 bg-pink-500 rounded-lg w-full px-4 font-bold '>{images.title}</span>
+                                       
                                         </ExternalLink>
-                                        </div>
                                         </div>
                                     
                            </div>         
@@ -90,9 +93,9 @@ const Userform = () => {
              </div>
              <div className="w-full lg:w-1/2 xl:w-5/12 px-4">
                 <div className="bg-transparent  relative rounded-lg p-8 sm:p-12 shadow-lg">
-                   <form onSubmit={handleSubmit} className='form border-sky-900'>
+                   <form onSubmit={handleSubmit} className='form '>
                       <div className="mb-6">
-                        <label className='text-blue-700 text-2xl'>Name</label>
+                        <label className='text-emerald-500 text-2xl'>Name</label>
                          <input
                             type="text"
                             placeholder="Your Name..."
@@ -103,16 +106,17 @@ const Userform = () => {
                             rounded
                             py-3
                             px-[14px]
-                            text-body-color text-base
-                            border border-[f0f0f0]
+                            bg-transparent
+                            text-green-500 text-base
+                            border border-emerald-500 
                             outline-none
                             focus-visible:shadow-none
-                            focus:border-primary
+                            focus:bg-opacity-90
                             "
                             />
                       </div>
                       <div className="mb-6">
-                      <label  className='text-blue-700 text-2xl'>Gender</label>
+                      <label  className='text-emerald-500 text-2xl'>Gender</label>
                          <select
                             type="string"
                             placeholder="Enter Your Sex"
@@ -123,12 +127,13 @@ const Userform = () => {
                             w-full
                             rounded
                             py-3
+                            bg-transparent
                             px-[14px]
-                            text-body-color text-base
-                            border border-[f0f0f0]
+                            text-green-500 text-base
+                            border border-emerald-500
                             outline-none
                             focus-visible:shadow-none
-                            focus:border-primary
+                            focus:border-emerald-500
                             "
                             >
                            <option value=" ">Select</option>
@@ -138,7 +143,7 @@ const Userform = () => {
                             </select>
                       </div>
                       <div className="mb-6">
-                      <label className='text-blue-700 text-2xl'>Age</label>
+                      <label className='text-emerald-500 text-2xl'>Age</label>
                          <select
                             type="number"
                             placeholder="How old are U"
@@ -149,21 +154,25 @@ const Userform = () => {
                             w-full
                             rounded
                             py-3
+                            bg-transparent
                             px-[14px]
-                            text-body-color text-base
-                            border border-[f0f0f0]
+                            text-green-500 text-base
+                            border border-emerald-500
                             outline-none
                             focus-visible:shadow-none
-                            focus:border-primary
+                            focus:border-emerald-500
                             "
                             >
                              <option value=' '>Select</option>
-                             <option value='18' >Above-18</option>
-                             <option value='21' >Above-21</option>
+                             <option value='18' >18</option>
+                             <option value='19' >19</option>
+                             <option value='20' >20</option>
+                             <option value='21' >21</option>
+                             <option value='22' >22</option>
                             </select>
                       </div>
                       <div className="mb-6">
-                      <label className='text-blue-700 text-2xl'>Educational Qualification</label>
+                      <label className='text-emerald-500 text-2xl'>Educational Qualification</label>
                          <select
                             rows="6"
                             placeholder="Highest Education qualification ..."
@@ -173,14 +182,16 @@ const Userform = () => {
                             className="
                             w-full
                             rounded
+                            
                             py-3
                             px-[14px]
-                            text-body-color text-base
-                            border border-[f0f0f0]
+                            bg-transparent
+                            text-green-500 
+                            border border-emerald-500
                             resize-none
                             outline-none
                             focus-visible:shadow-none
-                            focus:border-primary
+                            focus:border-emerald-500
                             "
                             >
                               <option value=" ">Select</option>
@@ -203,14 +214,15 @@ const Userform = () => {
                             type="submit"
                             className="
                             w-full
-                            text-white
-                            bg-green-500
-                            bg-primary
+                            text-green-100
+                            bg-emerald-500
                             rounded
-                            border border-primary
+                            border 
+                            border-emerald-500
+
                             p-3
                             transition
-                            hover:bg-opacity-90
+                            hover:bg-opacity-75
                             "
                             >
                            Search  Opportunities🧐

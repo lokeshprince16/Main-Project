@@ -10,6 +10,7 @@ export const examdata=[
         ExamFee:["OTR(One Time Registration) fee-150 ","Prelims fee - Rs.100", " Mains fee - Rs.200", "*Concession will be given to scheduled cast "],
         approxsalary:"15600 - 39100 + Incentive",
         link:"https://www.tnpsc.gov.in/",
+        
 
     },
     {
@@ -43,7 +44,7 @@ export const examdata=[
         ename:"TNPSC Group 2",
         minedu:"UG degree in any recognized University",
         minage:18,
-        minages:[{"Allposts":18},{"Probobation Officer":22}],
+        minages:["Allposts: 18 ","Probobation Officer :22"],
         posts:["Tamil Nadu Industries Subordinate Service","Tamil Nadu Defence Subordinate Service","Tamil Nadu General Subordinate Service","Tamil Nadu Jail Subordinate Service","Tamil Nadu Labor Subordinate Service","Tamil Nadu Registration Subordinate Service","Tamil Nadu Ministerial Service","Tamil Nadu Municipal Commissioner Subordinate service","Tamil Nadu Secretariat Service","Tamil Nadu Secretariat Service","Tamil Nadu secretariat service","Tamil Nadu State Legislative Assembly Secretariat Service","Tamil Nadu Secretariat Service","Tamil Nadu State Legislative Assembly Secretariat Service","Tamil Nadu Secretariat Service","Tamil Nadu Industries Subordinate Service","Tamil Nadu Ministerial Service","Tamil Nadu Local Fund Audit Subordinate Service","Tamil Nadu Handlooms and Textiles subordinate service","Tamil Nadu Co-operative Subordinate Service","Tamil Nadu Co-operative Subordinate Service","Tamil Nadu Agricultural Marketing Subordinate Service","Tamil Nadu Ministerial Service","Tamil Nadu General Subordinate Service","Tamil Nadu Town Panchayat Subordinate Service"],
         physique:[" For Men: Must be not less than 165 cms in Height andnot less than 86 cms round the chest on full inspiration and must have a chest expansion of not less than 5 cms on full inspiration"," For Women: Must be not less than 155 cms in Height. The Chest measurement will not apply to them. "    ],
         selectionprocess:["1.Mains","2.Direct Interview"],
@@ -180,7 +181,7 @@ export const examdata=[
         ename:"Combined Defence Services Examination (CDSE) -- Indian Air Force Academy",
         minedu:"UG degree in any recognized University",
         minage:19,
-        posts:['FLYING OFFICER','FLIGHT LIEUTENANT','SQUADRON LEADER','WING COMMANDER','GROUP CAPTAIN','AIR COMMODORE','AIR VICE MARSHAL','AIR MARSHAL HAG SCAL','AIR MARSHAL APEX SCALE','AIR CHIEF MARSHALL'],
+        posts:['FLYING OFFICER, ','FLIGHT LIEUTENANT, ',' SQUADRON LEADER, ',' WING COMMANDER, ',' GROUP CAPTAIN, ',' AIR COMMODORE','AIR VICE MARSHAL','AIR MARSHAL HAG SCAL','AIR MARSHAL APEX SCALE','AIR CHIEF MARSHALL'],
         physique:"refer notification",
         selectionprocess:['Written Exam','Interview','Physical Fitness'],
         ExamFee:["Exam fee - Rs.200. NO fee for Female candidates and some castes like SC/ST"],
@@ -271,9 +272,9 @@ export const examdata=[
         ename:"Railway Recruitment Board (RRB) - NTPC ",
         minedu:['UG degree on Agriculture any recognized Univeristy and should have Typing skill for the posts,JUnior Accounts Assistant Cum Typist,Traffic Assistant and Senior time keeper'],
         minage:18,
-        posts:['Commercial Apprentice',' Traffic Apprentice','Enquiry cum Reservation Clerk',' Good guard',' Assistant Station Master, Junior Assistant cum typist','Traffic Assistant','Senior Time Keeper'],
+        posts:['1.Commercial Apprentice',' 2.Traffic Apprentice',' 3. Enquiry cum Reservation Clerk',' 4. Good guard',' 5. Assistant Station Master', ' 6. Junior Assistant cum typist',' 7. Traffic Assistant',' 8. Senior Time Keeper'],
         physique:"Not Applicable",
-        selectionprocess:['1 . Computer Based Test','2. Document Verification','3. Typewriting Test and Document verification','4.Skill Test and Document Verification'],
+        selectionprocess:[' 1 . Computer Based Test',' 2. Document Verification',' 3. Typewriting Test and Document verification',' 4.Skill Test and Document Verification'],
         ExamFee:'Refer the notification',
         approxsalary:"30,200+ Incentive",
         link:"https://indianrailways.gov.in/"
