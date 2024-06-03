@@ -33,10 +33,10 @@ const Filterdetails = () => {
             {Object.keys(b).map((key) => (
               !excludedrow.includes(key) &&(
               <React.Fragment key={key} className='mb-1 '>
-                <span className="   font-[poppins] text-md uppercase  ] " >
+                <span className="font-[poppins] text-green-600 text-md uppercase  ] " >
                   {key}:
                 </span> 
-                <span className='rounded  font-[playfai Display] ' >
+                <span className='rounded font-[playfai Display] ' >
                   {b[key]}
                 </span>
                 </React.Fragment>

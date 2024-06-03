@@ -61,6 +61,7 @@ const Userform = () => {
 
   return (
     <div style={style} >
+      
 
    {/* <!-- component --> */}
     <link rel="stylesheet" href="https://cdn.tailgrids.com/tailgrids-fallback.css" />
@@ -81,8 +82,8 @@ const Userform = () => {
                                           
                                         
                                         <span className='text-emerald-500 bg-pink-500 rounded-lg w-full px-4 font-bold '>{images.title}</span>
-                                       
                                         </ExternalLink>
+                                       
                                         </div>
                                     
                            </div>         
@@ -95,7 +96,7 @@ const Userform = () => {
                 <div className="bg-transparent  relative rounded-lg p-8 sm:p-12 shadow-lg">
                    <form onSubmit={handleSubmit} className='form '>
                       <div className="mb-6">
-                        <label className='text-emerald-500 text-2xl'>Name</label>
+                        <label className='text-pink-500 text-2xl'>Name</label>
                          <input
                             type="text"
                             placeholder="Your Name..."
@@ -107,16 +108,20 @@ const Userform = () => {
                             py-3
                             px-[14px]
                             bg-transparent
-                            text-green-500 text-base
+                            text-emerald-500 text-base
                             border border-emerald-500 
                             outline-none
                             focus-visible:shadow-none
                             focus:bg-opacity-90
+                            hover:scale-110
+                            duration-500
+                            ease-in-out
+                            placeholder:text-emerald-500
                             "
                             />
                       </div>
                       <div className="mb-6">
-                      <label  className='text-emerald-500 text-2xl'>Gender</label>
+                      <label  className='text-pink-500 text-2xl'>Gender</label>
                          <select
                             type="string"
                             placeholder="Enter Your Sex"
@@ -129,11 +134,12 @@ const Userform = () => {
                             py-3
                             bg-transparent
                             px-[14px]
-                            text-green-500 text-base
+                            text-emerald-500 text-base
                             border border-emerald-500
                             outline-none
                             focus-visible:shadow-none
                             focus:border-emerald-500
+                            placeholder:text-pink-500
                             "
                             >
                            <option value=" ">Select</option>
@@ -143,7 +149,7 @@ const Userform = () => {
                             </select>
                       </div>
                       <div className="mb-6">
-                      <label className='text-emerald-500 text-2xl'>Age</label>
+                      <label className='text-pink-500 text-2xl'>Age</label>
                          <select
                             type="number"
                             placeholder="How old are U"
@@ -172,7 +178,7 @@ const Userform = () => {
                             </select>
                       </div>
                       <div className="mb-6">
-                      <label className='text-emerald-500 text-2xl'>Educational Qualification</label>
+                      <label className='text-pink-500 text-2xl'>Educational Qualification</label>
                          <select
                             rows="6"
                             placeholder="Highest Education qualification ..."
